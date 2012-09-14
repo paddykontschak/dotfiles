@@ -56,4 +56,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias rake="noglob rake"
 
 # Sublime Text 2
-alias "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"="subl"
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
