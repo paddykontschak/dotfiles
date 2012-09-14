@@ -24,5 +24,5 @@ Installation
 I suggest you install my configurations with Joshua Nichols' [homesick](https://github.com/technicalpickles/homesick).
 
     homesick clone git://github.com/paddykontschak/dotfiles.git
+    homesick pull dotfiles
     homesick symlink dotfiles
-    cd ~/.homesick/repos/dotfiles && git submodule update --init
