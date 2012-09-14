@@ -3,7 +3,7 @@ dotfiles
 
 These are my dotfiles.
 
-Dependencies
+"Dependencies"
 ---
 
 * oh-my-zsh
@@ -16,7 +16,7 @@ Dependencies
 * irb
 * MacIRB/DietIRB
 
-To be honest, I nothing is going to break if you don't have all of these.
+To be honest, nothing is going to break if you don't have all of these.
 
 Installation
 ---
