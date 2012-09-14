@@ -16,7 +16,7 @@ Dependencies
 * irb
 * MacIRB/DietIRB
 
-To be honest, I don't think anything is going to break if you don't have all of these. I will test it later on my other MacBook.
+To be honest, I nothing is going to break if you don't have all of these.
 
 Installation
 ---
@@ -25,3 +25,4 @@ I suggest you install my configurations with Joshua Nichols' [homesick](https://
 
     homesick clone git://github.com/paddykontschak/dotfiles.git
     homesick symlink dotfiles
+    cd ~/.homesick/repos/dotfiles && git submodule update --init
