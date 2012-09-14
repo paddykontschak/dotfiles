@@ -110,7 +110,7 @@
 [core]
   autocrlf = false
   editor = subl -w
-  excludesfile = ~/.yadr/git/gitignore
+  excludesfile = ~/.gitignore
 [advice]
   statusHints = false
 [diff]
