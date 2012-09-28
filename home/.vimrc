@@ -30,6 +30,7 @@ set hidden
 if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
+  :colorscheme Tomorrow-Night
 endif
 
 " ================ Search Settings  =================
@@ -126,3 +127,4 @@ inoremap <C-U> <C-G>u<C-U>
 
 " Vim Powerline
 let g:Powerline_symbols = 'fancy'
+set laststatus=2
