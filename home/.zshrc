@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # default: robbyrussell
 ZSH_THEME="agnoster"
+DEFAULT_USER="patrick"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
