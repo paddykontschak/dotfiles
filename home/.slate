@@ -1,0 +1,106 @@
+# paddykontschak's .slate file.
+
+# ==== Table of content
+#      1. Basic configuration and variables
+#      2. Apps
+#      3. Splitting and Focus
+#      4. Responsive
+#      5. Misc.
+
+# ==== Basic configuration and variables
+#      Configs
+config defaultToCurrentScreen    true
+config gridCellRoundedCornerSize 3
+config checkDefaultsOnLoad       true
+
+#      Monitors
+alias bigmac    1680x1050
+alias toastbrot 1280x900
+alias knoppers  1024x600
+
+#      Default layouts
+default mountainlion resolutions:${bigmac}
+default snowleopard  resolutions:${toastbrot}
+default linux        resolutions:${knoppers}
+
+#      Grid
+alias row      screenSizeX/20
+alias 1-column screenSizeY/20+21
+alias column   screenSizeY/20
+
+# ==== Apps
+#      Basic sizes
+alias full    move        0;0                                screenSizeX;screenSizeY
+alias big     move   ${row};${1-column}             screenSizeX-2*${row};screenSizeY-${column}*3
+alias medium  move 3*${row};${1-column}+${column}*2 screenSizeX-6*${row};screenSizeY-${column}*6
+alias small   move 4*${row};${1-column}+${column}*3 screenSizeX-8*${row};screenSizeY-${column}*8
+alias buddies move   ${row};${1-column}                       2.5*${row};screenSizeY-${column}*10
+alias chat    move 4*${row};${1-column}                         8*${row};screenSizeY-${column}*2
+alias twitter move   ${row};${1-column}                       3.5*${row};screenSizeY-${column}*2
+alias appnet  move 5*${row};${1-column}                       3.5*${row};screenSizeY-${column}*2
+
+#      App layouts
+alias  browser      'Firefox'
+layout mountainlion 'Finder'              ${small}
+layout mountainlion 'Firefox'             ${big}
+layout mountainlion 'Sparrow'             ${big}
+layout mountainlion 'Messages':SORT_TITLE ${buddies} | ${chat}
+layout mountainlion 'Twitterrific'        ${twitter}
+layout mountainlion '#moApp'              ${appnet}
+layout mountainlion 'Reeder'              ${big}
+layout mountainlion 'iTerm'               ${medium}
+
+#      Basic location bindings
+bind     1:cmd;ctrl;alt ${small}
+bind     2:cmd;ctrl;alt ${medium}
+bind     3:cmd;ctrl;alt ${big}
+bind     4:cmd;ctrl;alt ${full}
+bind     t:cmd;ctrl;alt ${twitter}
+bind     a:cmd;ctrl;alt ${appnet}
+bind     b:cmd;ctrl;alt ${buddies}
+bind     c:cmd;ctrl;alt ${chat}
+bind space:cmd;ctrl;alt grid padding:5 ${bigmac}:20,20
+
+# ==== Splitting and Focus
+#      Push Bindings
+bind right:cmd;ctrl push right bar-resize:screenSizeX/3
+bind  left:cmd;ctrl push left  bar-resize:screenSizeX/3
+bind    up:cmd;ctrl push up    bar-resize:screenSizeY/2
+bind  down:cmd;ctrl push down  bar-resize:screenSizeY/2
+
+#      Focus Bindings
+bind right:cmd;ctrl;alt focus right
+bind  left:cmd;ctrl;alt focus left
+bind    up:cmd;ctrl;alt focus up
+bind  down:cmd;ctrl;alt focus down
+
+# ==== Responsive
+#      Resize browser to 4 widths common in responsive design
+#      Here are the 4 common widths: 980px, 768px, 480px and 320px
+alias scroll 14
+alias nine   (980+${scroll})
+alias seven  (768+${scroll})
+alias four   (480+${scroll})
+alias three  (320+${scroll})
+
+#      Responsive layouts
+layout nineeight     ${browser} move  (screenSizeX-${nine})/2;${1-column}  ${nine};screenSizeY-${column}*3
+layout sevensixeight ${browser} move (screenSizeX-${seven})/2;${1-column} ${seven};screenSizeY-${column}*3
+layout foureight     ${browser} move  (screenSizeX-${four})/2;${1-column}  ${four};screenSizeY-${column}*3
+layout threetwo      ${browser} move (screenSizeX-${three})/2;${1-column} ${three};screenSizeY-${column}*3
+
+#      Key bindings to switch between sizes
+bind h:cmd;ctrl;alt layout nineeight
+bind j:cmd;ctrl;alt layout sevensixeight
+bind k:cmd;ctrl;alt layout foureight
+bind l:cmd;ctrl;alt layout threetwo
+
+# ==== Misc.
+#      Application Switcher
+#      bind tab:cmd switch
+
+#      Window Hints
+bind esc:cmd hint
+
+#      Test Cases
+source .slate.test if_exists
