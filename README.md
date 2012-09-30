@@ -6,8 +6,8 @@ These are my dotfiles.
 "Dependencies"
 ---
 
-* oh-my-zsh
-* homebrew
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [homebrew](https://github.com/mxcl/homebrew)
 * RVM
 * NPM
 * git
@@ -15,13 +15,14 @@ These are my dotfiles.
 * irssi
 * irb
 * MacIRB/DietIRB
+* [Slate](https://github.com/jigish/slate)
 
 To be honest, nothing is going to break if you don't have all of these.
 
 Installation
 ---
 
-I suggest you install my configurations with Joshua Nichols' [homesick](https://github.com/technicalpickles/homesick).
+I suggest you install these configurations with Joshua Nichols' [homesick](https://github.com/technicalpickles/homesick).
 
     homesick clone git://github.com/paddykontschak/dotfiles.git
     homesick pull dotfiles
