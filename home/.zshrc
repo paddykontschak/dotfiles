@@ -32,30 +32,34 @@ DEFAULT_USER="patrick"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git git-flow brew gem)
-
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
 # Path
-
 # Homebrew
 export PATH="$PATH:/usr/local/Cellar"
 export PATH=$HOME/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin
-
 # Node
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
-
 # RVM
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 # Aliases
-
 # Rake
 alias rake="noglob rake"
-
 # Sublime Text 2
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
+# Navigation
+# Skip forward/back a word with opt-arrow
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+# Delete word with opt-arrow
+# bindkey '0C' backward-kill-word
+# bindkey '0D' kill-word
+# Delete line with cmd-backspace
+# bindkey '[I' kill-whole-line
