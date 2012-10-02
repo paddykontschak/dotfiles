@@ -128,3 +128,21 @@ inoremap <C-U> <C-G>u<C-U>
 " Vim Powerline
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
+
+" Disable arrow keys to force learning hjkl
+
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" Split window
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
