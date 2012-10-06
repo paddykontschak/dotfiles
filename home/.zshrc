@@ -41,7 +41,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/usr/local/Cellar"
 export PATH=$HOME/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/local/bin:/usr/local/sbin:/usr/local/share/npm/bin
 # Node
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 # RVM
