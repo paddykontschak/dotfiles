@@ -33,15 +33,15 @@ alias twitter move   ${row};${1-column}                       3.5*${row};screenS
 alias appnet  move 5*${row};${1-column}                       3.5*${row};screenSizeY-${column}*2
 
 # App Layouts
-alias  browser      'Firefox'
-layout mountainlion 'Finder'              ${small}
-layout mountainlion 'Firefox'             ${big}
-layout mountainlion 'Sparrow'             ${big}
-layout mountainlion 'Messages':SORT_TITLE ${buddies} | ${chat}
-layout mountainlion 'Twitterrific'        ${twitter}
-layout mountainlion '#moApp'              ${appnet}
-layout mountainlion 'Reeder'              ${big}
-layout mountainlion 'iTerm'               ${medium}
+alias  browser      'Google Chrome'
+layout mountainlion 'Google Chrome':IGNORE_FAIL ${small}
+layout mountainlion 'Firefox'                   ${big}
+layout mountainlion 'Sparrow'                   ${big}
+layout mountainlion 'Messages':SORT_TITLE       ${buddies} | ${chat}
+layout mountainlion 'Twitterrific'              ${twitter}
+layout mountainlion '#moApp'                    ${appnet}
+layout mountainlion 'Reeder'                    ${big}
+layout mountainlion 'iTerm'                     ${medium}
 
 # Basic Location Bindings
 bind     1:cmd;ctrl;alt ${small}
@@ -70,7 +70,7 @@ bind  down:cmd;ctrl;alt focus down
 # Responsive
 # Resize browser to 4 widths common in responsive design
 # Here are the 4 common widths: 980px, 768px, 480px and 320px
-alias scroll 14              # Change to 0 when using Chrome or when Firefox finally implements native OS X scrollbars
+alias scroll 0               # Change to 14 when using Firefox - or remove entirely when Firefox implements native Lion scrollbars
 alias nine   (980+${scroll}) # 980px
 alias seven  (768+${scroll}) # 768px
 alias four   (480+${scroll}) # 480px
