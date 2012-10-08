@@ -30,7 +30,7 @@ alias small   move 4*${row};${1-column}+${column}*3 screenSizeX-8*${row};screenS
 alias buddies move   ${row};${1-column}                       2.5*${row};screenSizeY-${column}*10
 alias chat    move 4*${row};${1-column}                         8*${row};screenSizeY-${column}*2
 alias twitter move   ${row};${1-column}                       3.5*${row};screenSizeY-${column}*2
-alias appnet  move 5*${row};${1-column}                       3.5*${row};screenSizeY-${column}*2
+alias appnet  move 5*${row};${1-column}                         5*${row};screenSizeY-${column}*2
 
 # App Layouts
 alias  browser      'Google Chrome'
@@ -39,7 +39,7 @@ layout mountainlion 'Firefox'                   ${big}
 layout mountainlion 'Sparrow'                   ${big}
 layout mountainlion 'Messages':SORT_TITLE       ${buddies} | ${chat}
 layout mountainlion 'Twitterrific'              ${twitter}
-layout mountainlion '#moApp'                    ${appnet}
+layout mountainlion 'Appetizer'                 ${appnet}
 layout mountainlion 'Reeder'                    ${big}
 layout mountainlion 'iTerm'                     ${medium}
 
