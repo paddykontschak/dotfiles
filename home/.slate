@@ -18,19 +18,18 @@ default linux        resolutions:${knoppers}
 
 # Grid
 alias row      screenSizeX/20
-alias 1-column screenSizeY/20+21 # Add 21 to account for the menubar
 alias column   screenSizeY/20
 
 # Apps
 # Basic Sizes
-alias full    move        0;0                                screenSizeX;screenSizeY
-alias big     move   ${row};${1-column}             screenSizeX-2*${row};screenSizeY-${column}*3
-alias medium  move 3*${row};${1-column}+${column}*2 screenSizeX-6*${row};screenSizeY-${column}*6
-alias small   move 4*${row};${1-column}+${column}*3 screenSizeX-8*${row};screenSizeY-${column}*8
-alias buddies move   ${row};${1-column}                       2.5*${row};screenSizeY-${column}*10
-alias chat    move 4*${row};${1-column}                         8*${row};screenSizeY-${column}*2
-alias twitter move   ${row};${1-column}                       3.5*${row};screenSizeY-${column}*2
-alias appnet  move 5*${row};${1-column}                         5*${row};screenSizeY-${column}*2
+alias full    move screenOriginX;screenOriginY                      screenSizeX;screenSizeY
+alias big     move        ${row};screenOriginY+${column}   screenSizeX-2*${row};screenSizeY-${column}*3
+alias medium  move      3*${row};screenOriginY+${column}*3 screenSizeX-6*${row};screenSizeY-${column}*6
+alias small   move      4*${row};screenOriginY+${column}*4 screenSizeX-8*${row};screenSizeY-${column}*8
+alias buddies move        ${row};screenOriginY+${column}             2.5*${row};screenSizeY-${column}*10
+alias chat    move      4*${row};screenOriginY+${column}               8*${row};screenSizeY-${column}*2
+alias twitter move        ${row};screenOriginY+${column}             3.5*${row};screenSizeY-${column}*2
+alias appnet  move      5*${row};screenOriginY+${column}               5*${row};screenSizeY-${column}*2
 
 # App Layouts
 alias  browser      'Google Chrome'
@@ -78,10 +77,10 @@ alias three  (320+${scroll}) # 320px
 
 # Responsive Layouts
 # Resize browser window and align the browser on the center of the screen
-layout nineeight     ${browser} move  (screenSizeX-${nine})/2;${1-column}  ${nine};screenSizeY-${column}*3
-layout sevensixeight ${browser} move (screenSizeX-${seven})/2;${1-column} ${seven};screenSizeY-${column}*3
-layout foureight     ${browser} move  (screenSizeX-${four})/2;${1-column}  ${four};screenSizeY-${column}*3
-layout threetwo      ${browser} move (screenSizeX-${three})/2;${1-column} ${three};screenSizeY-${column}*3
+layout nineeight     ${browser} move  (screenSizeX-${nine})/2;screenOriginY+${column}  ${nine};screenSizeY-${column}*3
+layout sevensixeight ${browser} move (screenSizeX-${seven})/2;screenOriginY+${column} ${seven};screenSizeY-${column}*3
+layout foureight     ${browser} move  (screenSizeX-${four})/2;screenOriginY+${column}  ${four};screenSizeY-${column}*3
+layout threetwo      ${browser} move (screenSizeX-${three})/2;screenOriginY+${column} ${three};screenSizeY-${column}*3
 
 # Key Bindings to switch between sizes
 bind h:cmd;ctrl;alt layout nineeight     # Default
