@@ -33,7 +33,8 @@ alias appnet  move      5*${row};screenOriginY+${column}               5*${row};
 
 # App Layouts
 alias  browser      'Google Chrome'
-layout mountainlion 'Google Chrome':IGNORE_FAIL ${small}
+layout mountainlion 'Finder'                    ${small}
+layout mountainlion 'Google Chrome':IGNORE_FAIL ${big}
 layout mountainlion 'Firefox'                   ${big}
 layout mountainlion 'Sparrow'                   ${big}
 layout mountainlion 'Messages':SORT_TITLE       ${buddies} | ${chat}
@@ -56,7 +57,7 @@ bind space:cmd;ctrl;alt grid padding:5 ${bigmac}:20,20
 # Splitting and Focus
 # Push Bindings
 bind right:cmd;ctrl push right bar-resize:screenSizeX/3
-bind  left:cmd;ctrl push left  bar-resize:screenSizeX/3
+bind  left:cmd;ctrl push left  bar-resize:screenSizeX/1.5
 bind    up:cmd;ctrl push up    bar-resize:screenSizeY/2
 bind  down:cmd;ctrl push down  bar-resize:screenSizeY/2
 
