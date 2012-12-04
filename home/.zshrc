@@ -48,7 +48,7 @@ export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 # Git Achievements
-export PATH="$PATH:~/.git-achievements"
+export PATH="$HOME/.git-achievements:$PATH"
 
 # Aliases
 # Rake

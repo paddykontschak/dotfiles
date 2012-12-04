@@ -25,6 +25,3 @@
 [submodule "home/.vim/bundle/nerdcommenter"]
 	path = home/.vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "home/.git_achievements"]
-	path = home/.git_achievements
-	url = git@github.com:paddykontschak/git-achievements.git
