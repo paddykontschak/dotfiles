@@ -1,7 +1,6 @@
-# set your user tokens as enivornment variables, such as ~/.secrets
-[include]
-  path = ~/.secrets
-# See the README for examples.
+[user]
+  name = Patrick Kontschak
+  email = patrick.kontschak@gmail.com
 [color]
   ui = true
 [color "branch"]
