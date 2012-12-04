@@ -47,6 +47,8 @@ export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 # RVM
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# Git Achievements
+export PATH="$PATH:~/.git-achievements"
 
 # Aliases
 # Rake
@@ -55,6 +57,8 @@ alias rake="noglob rake"
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 # Fast User Switching
 alias fuswitch='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+# Git Achievements
+alias git="git-achievements"
 
 # Navigation
 # Skip forward/back a word with opt-arrow
