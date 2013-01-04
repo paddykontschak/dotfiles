@@ -56,7 +56,7 @@ alias rake="noglob rake"
 # Sublime Text 2
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 # Fast User Switching
-alias fuswitch='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+alias fusvino='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -switchToUserID 502'
 # Git Achievements
 alias git="git-achievements"
 
